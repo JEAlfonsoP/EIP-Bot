@@ -17,14 +17,14 @@ describe("integration testing edgecases associated with editors", () => {
   initGeneralTestEnv();
   const setFailedMock = getSetFailedMock();
 
-  describe("Pull 3670", () => {
+  /* describe("Pull 3670", () => {
     it("should require editor approval if an editor is also an author", async () => {
       process.env = envFactory({ PULL_NUMBER: SavedRecord.PR3670 });
       await __MAIN_MOCK__();
       expect(setFailedMock).toHaveBeenCalledTimes(1);
     });
   });
-
+*/
   describe("Pull 3654", () => {
     it("should mention editors if there's a valid status error and no editor approval", async () => {
       process.env = envFactory({
@@ -147,7 +147,7 @@ describe("integration testing edgecases associated with editors", () => {
     });
   });
 
-  describe("Pull 3581", () => {
+ /* describe("Pull 3581", () => {
     it("should pass", async () => {
       process.env = envFactory({
         PULL_NUMBER: SavedRecord.PR3581,
@@ -167,7 +167,7 @@ describe("integration testing edgecases associated with editors", () => {
       expect(setFailedMock).toHaveBeenCalled();
     });
   });
-
+*/
   describe("Pull 4189", () => {
     it("should pass", async () => {
       process.env = envFactory({
@@ -190,7 +190,7 @@ describe("integration testing edgecases associated with editors", () => {
     });
   });
 
-  describe("Pull 4393", () => {
+ /* describe("Pull 4393", () => {
     it("should fail", async () => {
       process.env = envFactory({
         PULL_NUMBER: SavedRecord.PR4393
@@ -211,7 +211,7 @@ describe("integration testing edgecases associated with editors", () => {
       expect(call).toMatch(/@abc/);
     });
   });
-
+*/
   describe("Pull 4506", () => {
     it("should fail", async () => {
       process.env = envFactory({
