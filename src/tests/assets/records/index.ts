@@ -12,7 +12,7 @@ export enum SavedRecord {
    * The fix to this bug was considering EIP_EDITORS to be dynamic based on the eip / file
    * at hand. So if an editor is an author they won't be consider an editor for that test.
    * */
-  PR3670 = "3670",
+  // PR3670 = "3670",  Pandapip PR
   PR3596 = "3596",
   /** **SHOULD PASS**
    *
@@ -92,7 +92,7 @@ export enum SavedRecord {
    * @summary: PR3581 makes changes to a non-eip file which we would like to
    * support, when this record was added this was a newly added feature
    */
-  PR3581 = "3581",
+  //PR3581 = "3581",  Pandapip PR
   /**
    * @summary: this is an example PR that was used to implement the feature
    * that authors be allowed to submit a PR to mark their EIP withdrawn and
@@ -114,7 +114,7 @@ export enum SavedRecord {
    * p.s. this should fail with an error that mentions editors need to assign
    * an eip number
    */
-  PR4393 = "4393",
+  //PR4393 = "4393",   Pandapip PR
   /**
    * @summary: a change to eip-1 that's not able to discern the authors
    */
@@ -182,14 +182,14 @@ export const getMockRecords = async () => {
   const PR3768_1 = await import("./3768/1.json");
   const PR3768_2 = await import("./3768/2.json");
   const PR3596 = await import("./3596.json");
-  const PR3670 = await import("./3670.json");
+  //const PR3670 = await import("./3670.json");   Pandapip PR
   const PR3654_1 = await import("./3654/1.json");
   const PR3654_2 = await import("./3654/2.json");
-  const PR3623 = await import("./3623.json");
+  //const PR3623 = await import("./3623.json");   Pandapip PR
   const PR3581 = await import("./3581.json");
   const PR4189 = await import("./4189.json");
   const PR4478 = await import("./4478.json");
-  const PR4393 = await import("./4393.json");
+  //const PR4393 = await import("./4393.json");    Pandapip PR
   const PR4499 = await import("./4499.json");
   const PR4506 = await import("./4506.json");
   const PR4361 = await import("./4361.json");
@@ -201,20 +201,20 @@ export const getMockRecords = async () => {
   assertMethods(PR3768_1);
   assertMethods(PR3768_2);
   assertMethods(PR3596);
-  assertMethods(PR3670);
+//  assertMethods(PR3670);   Pandapip PR
   assertMethods(PR3654_1);
   assertMethods(PR3654_2);
   assertMethods(PR3623);
-  assertMethods(PR3581);
+//  assertMethods(PR3581);   Pandapip PR
   assertMethods(PR4189);
   assertMethods(PR4478);
-  assertMethods(PR4393);
+//  assertMethods(PR4393);   Pandapip PR
   assertMethods(PR4506);
   assertMethods(PR4361);
 
   const Records: { [k in keyof typeof SavedRecord]: MockRecord[] } = {
     PR3596: PR3596.default,
-    PR3670: PR3670.default,
+ //   PR3670: PR3670.default,  Pandapip PR
     PR3654_1: PR3654_1.default,
     PR3654_2: PR3654_2.default,
     PR3767: PR3767.default,
@@ -224,10 +224,10 @@ export const getMockRecords = async () => {
     PR3768_1: PR3768_1.default,
     PR3768_2: PR3768_2.default,
     PR3623: PR3623.default,
-    PR3581: PR3581.default,
+ //   PR3581: PR3581.default,   Pandapip PR
     PR4189: PR4189.default,
     PR4478: PR4478.default,
-    PR4393: PR4393.default,
+ //   PR4393: PR4393.default,   Pandapip PR
     PR4499: PR4499.default,
     PR4506: PR4506.default,
     PR4361: PR4361.default
